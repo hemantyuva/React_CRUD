@@ -13,7 +13,7 @@ const questions = (state=initialState,action) => {
     case actionTypes.REQUEST_SUCCESS: 
       return {...state,loading: true, error: undefined,update: false};
     case actionTypes.RESPONSE_ERROR:
-      return{...state, loading: false, error: action.payload.error,update: false} 
+      return{...state, loading: false, error: action.payload,update: false} 
     case actionTypes.GET_ALL_QUESTIONS_SUCCESS:
       return {...state,loading: false, lists: action.payload.response,update: false}
     case actionTypes.CREATE_QUESTION_SUCCESS:
