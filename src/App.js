@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Provider } from 'react-redux';
+import AppRouter from './routers/AppRouter';
+import reducer from './reducers';
+import thunk from 'redux-thunk';
+import { routerMiddleware } from 'react-router-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import history from './routers/AppRouter';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
 
-export default App;
+const historyMiddleware = routerMiddleware(history);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// import '../public/assets/css/reset.css';
+
+export const store = createStore(
+  reducer,
+  composeEnhancers(applyMiddleware(historyMiddleware, thunk))
+);
+
+export default () => (
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
+);

@@ -1,0 +1,46 @@
+/*body{
+	overflow-x: hidden;
+}*/
+.modal-m.fade .modal-m-dialog {
+    transform: translate(0px, -25%);
+    transition: transform 0.3s ease-out 0s;
+}
+.modal-m.fade.in .modal-dialog {
+    transform: translate(0px, 0px);
+}
+.alert-box {
+    position: absolute;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.login-card{
+	top: 20%;
+}
+.justify-content-center{
+	margin: 0 !important;
+}
+.flyover {
+   left: 150%;
+   overflow: hidden;
+   position: fixed;
+   width: 30%;
+   opacity: 0.95;
+   z-index: 1050;
+   transition: left 0.6s ease-out 0s;
+}
+.jumbotron{
+  padding: 1rem 2rem !important;
+}
+.flyover-centered {
+   top: 10%;
+   transform: translate(-50%, -50%);
+}
+
+.flyover.in {
+   left: 83%;
+}
+
+
+
+

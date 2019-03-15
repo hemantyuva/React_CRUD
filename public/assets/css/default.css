@@ -1,0 +1,45 @@
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+
+.btn-info {
+	min-width: 55px;
+}
+
+.btn-danger {
+	min-width: 55px;
+	margin-top: 10px;
+}
+
+td.radio-td {
+	width: 140px;
+}
+
+td.radio-td input {
+	margin-right: 5px;
+}
+
+td.radio-td .radio {
+	float: left;
+	margin-right: 15px;
+}
+
+.mapping-select {
+	margin: 0.75rem 0rem;
+}
+
+.table-responsive.table-bottom td {
+	border-top: none;
+}
+
+.map-form {
+	margin-right: 10px;
+}
