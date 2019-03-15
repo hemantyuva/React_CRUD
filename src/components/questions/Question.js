@@ -41,8 +41,7 @@ class Question extends React.Component{
   }
 
   renderRows(){
-  	debugger
-  
+
   	return(
   		<React.Fragment>
   			<tr>
