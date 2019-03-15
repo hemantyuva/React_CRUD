@@ -15,7 +15,7 @@ export function getAllQuestions(page) {
     .then(response => {
         dispatch(getAllQuestionsSuccess(response.data))
       }).catch(error=> {
-        dispatch(createError(error.response.data.error.fields))
+        dispatch(createError(error.response))
       });
 
   };
@@ -41,7 +41,7 @@ export function getMappings() {
     .then(response => {
         dispatch(getMappingsSuccess(response.data))
       }).catch(error=> {
-        dispatch(createError(error.response.data.error.fields))
+        dispatch(createError(error.response))
       });
 
   };
@@ -68,7 +68,7 @@ export function saveQuestions(activePage,data) {
         dispatch(saveQuestionsSuccess(response.data))
         dispatch(reset('questionForm'))
       }).catch(error=> {
-        dispatch(createError(error.response.data.error.fields))
+        dispatch(createError(error.response))
       });
 
   };
@@ -92,7 +92,7 @@ export function updateQuestions(id,data,activePage) {
         dispatch(getAllQuestions(activePage))
         dispatch(updateQuestionsSuccess(response.data))
       }).catch(error=> {
-        dispatch(createError(error.response.data.error.fields))
+        dispatch(createError(error.response))
       });
 
   };
@@ -132,7 +132,7 @@ export function deleteQuestion(item,activePage){
         dispatch(getAllQuestions(activePage))
         dispatch(deleteQuestionsSuccess(response.data))
       }).catch(error=> {
-        dispatch(createError(error.response.data.error.fields))
+        dispatch(createError(error.response))
       });
 
   };
